@@ -10,6 +10,9 @@ Variable names should start with a lowercase letter or an underscore
 variable names are case sensitive
 
 
+Constants in ruby can be changed unlike other languages however it is not advised
+
+
 =end
 
 # variable syntax in ruby follows these conventions:
@@ -19,7 +22,13 @@ handsome = true
 age = 27+1
 
 
+# constants in ruby:
 
+NAME = "Michael Ballard"
+PI = 3.14159
+
+p NAME
+p PI
 
 # Local Variables
 def local
@@ -40,3 +49,16 @@ TEAM = "New York Yankees"
 
 # Class Variable
 @@x = "This is a class Variable"
+
+# Parrallel variable assignment
+a = 10
+b = 20
+c = 30
+
+a,b,c = 11,21,31
+p a,b,c
+
+# variable swapping:
+
+a,b = b, a
+p a, b

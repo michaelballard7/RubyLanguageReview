@@ -3,34 +3,35 @@ system 'clear'
 # ruby loops are very versatile and interchangeable
 # there are specific use cases where you may prefer one over another
 
+
 # the while loop
 num = 0
 while num < 10
-    num += 1 
-    puts num 
-end 
+    num += 1
+    puts num
+end
 
 
 # the each loop
 each loops allow me to iterate over a range
 (1..5).each do |var|
     puts var
-end 
+end
 
 # each loops allow me to iterate over objects
 names = ["Michae", "Tiffany","Hardy", "Matt"]
 names.each  do |name|
     puts name
-end  
+end
 
-# I can run a one line each loop as such 
+# I can run a one line each loop as such
 names.each {|name| p  name}
 
 
 # Ruby has for in loops but they are seldomly used
-for i in 0..42 
-    p i 
-end 
+for i in 0..42
+    p i
+end
 
 # Ruby Nested Iterators
 teams = {
@@ -54,6 +55,5 @@ teams.each do |team, players|
     # now iterate over the values for their key:value pairs
     players.each do |position, player|
         puts "#{player} starts at #{position}"
-    end 
-end 
-
+    end
+end

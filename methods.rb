@@ -8,10 +8,8 @@ def hello(name)
     puts "Hello, There #{name}"
 end
 
+
 # to invoke methods:
-hello("Michael")
-
-
 def good_morning(first_name, last_name)
     puts "Good Morning, #{first_name} #{last_name}"
 end
@@ -131,3 +129,41 @@ def print_address city:, state:, zip:
     puts zip
 end
 print_address city: "Wilmington", state:"NC", zip:"28451"
+
+=begin
+ a mini shopping cart simulation program using procedural methods
+=end
+
+clicked_items = ["body butter", "body oil", "lipbalm"]
+
+def onclick_save_item(clicked_items)
+  items_for_cart = clicked_items
+  return items_for_cart
+end
+
+def add_to_cart(clicked_items)
+  cart = []
+  items = onclick_save_item(clicked_items)
+  items.each do |item|
+    cart.push(item)
+  end
+cart
+end
+
+def purchase_item(clicked_items)
+  items = add_to_cart(clicked_items)
+  items.each do |item|
+    menu = {"body butter" => 7.00,
+      "body oil" => 15.00,
+      "lipbalm" => 4.00
+    }
+    menu.each_key do |key|
+      if key ==  item
+        p "#{item} purchased for #{menu[item]}"
+      end
+    end
+  end
+end
+
+# p add_to_cart(clicked_items)
+purchase_item(clicked_items)
