@@ -110,9 +110,6 @@ p ages.reject(&is_old)
 
 
 
-
-
-
 # Lambdas in Ruby:
 first_name = lambda { |first, last| first + " " + last}
 p first_name["Michael", "Lambda"]
@@ -124,6 +121,7 @@ p first_name["Michael", "ArrowLambda"]
 # The main difference in procs and lambdas:
 # Lambdas count the args exactly, where  procs ignore additional args
 # Lambdas will throw an error for additional arguments
+# lambdas can be seen as an anonymous method
 
 
 # With Ruby programming I can use name args as such
